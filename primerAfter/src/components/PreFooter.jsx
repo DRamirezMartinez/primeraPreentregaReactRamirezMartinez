@@ -15,6 +15,7 @@ const PreFooter = () => {
                 <div className="row">
                     <div className="col mx-3">
                     <h2>Descárgate nuestra app</h2>
+                    <h2>Descárgate nuestra app</h2>
                     <p>Descárgate nuestra app y no te pierdas nuestras novedades</p>
                     </div>
                     
