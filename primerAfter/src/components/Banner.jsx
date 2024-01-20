@@ -11,6 +11,7 @@ const Banner = () => {
                         <div class="card-body text-center">
                             <h4>¡Probá la Pileta de Cheddar, che!</h4>
                             <p class="card-text">Pedí la nueva Pileta de Cheddar de McDonald's para enchufarle mucho, muchísimo cheddar a tus papitas, McNuggets y hamburguesa.</p>
+                            
                         </div>
                     </div>
                 </div>
