@@ -49,7 +49,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="col-md-2 text-secondary">
-                    <p> <Logo tamano={40} /> @ McDonald's 2023</p>
+                    <p> <Logo tamano={40} /> @ McDonalds 2023</p>
                 </div>
             </div>
         </div> 

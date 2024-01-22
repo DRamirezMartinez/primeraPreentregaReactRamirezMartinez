@@ -1,12 +1,32 @@
-const ItemListContainer = ({greeting}) => {
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
+import ItemCount from "./ItemCount";
+import arrayProductos from "./json/productos.json";
+import ItemList from "./ItemList";
+
+/* eslint-disable react/prop-types */
+const ItemListContainer = () => {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        const promesa = new Promise(resolve => {
+            setTimeout(() => {
+              resolve(arrayProductos);  
+            }, 2000);
+        })
+        promesa.then(data => {
+            setItems(data);
+            console.log(data);
+        })
+    }, []);
+
+
     return (
-        <div className="container my-5">
-            <div className="row">
-                <div className="col text-center display-6">
-                <div class="alert alert-warning p-3" role="alert">{greeting}</div>
-                </div>
-            </div>
-        </div>
+        <>
+        <ItemList items= {items} />
+        <ItemCount stock={10}/>
+        </>
+      
            
     )
 }
