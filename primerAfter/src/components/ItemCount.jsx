@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ItemCount = ({stock}) =>{
 
@@ -26,10 +26,14 @@ const ItemCount = ({stock}) =>{
         }
     }
 
+    useEffect(()=>{
+        setItemStock(stock)
+    }, [stock]);
+        
     return (
         <>
             <div className="row my-1">
-                <div className="col-md-2">
+                <div className="col-md-4">
                     <div className="btn-group" role="group" aria-label="Basic example">
                         <button type="button" className="btn btn-warning" onClick={decrementar}>-</button>
                         <button type="button" className="btn btn-warning"> {counter} </button>
@@ -39,7 +43,7 @@ const ItemCount = ({stock}) =>{
             </div>
 
             <div className="row my-1">
-                <div className="col-md-2">                    
+                <div className="col-md-5">                    
                         <button type="button" className="btn btn-warning" onClick={onAdd}>Agregar al carrito</button>                    
                     </div>
             </div>
